@@ -14,8 +14,6 @@ const Grid = () => {
 
     },[name]);
 
-
-
     const sharedProps = {
         animate: true,
         gutter: 30,
