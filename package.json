@@ -1,7 +1,6 @@
 {
-  "name": "magic-grid-react",
-  "version": "0.1.0",
-  "private": true,
+  "name": "use-magic-grid",
+  "version": "0.0.1",
   "main": "index.js",
   "dependencies": {
     "magic-grid": "^3.3.6",

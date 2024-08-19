@@ -1,4 +1,4 @@
-# Magic Grid React
+# Use Magic Grid
 
 ## React wrapper for the [magic-grid](https://github.com/e-oj/Magic-Grid) library
 
@@ -10,7 +10,7 @@
 Get Magic Grid via NPM:
 
 ```
-npm install magic-grid-react
+npm install use-magic-grid
 ```
 
 #### Step 2 (skip if using CDN)
@@ -18,13 +18,13 @@ npm install magic-grid-react
 Import the `useMagicGrid` hook:
 
 ```javascript
-import { useMagicGrid } from 'magic-grid-react';
+import { useMagicGrid } from 'use-magic-grid';
 ```
 
 or
 
 ```js
-const { useMagicGrid } = require('magic-grid-react');
+const { useMagicGrid } = require('use-magic-grid');
 ```
 
 #### Step 3
