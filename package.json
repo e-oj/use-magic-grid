@@ -2,57 +2,27 @@
   "name": "magic-grid-react",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "magic-grid": "^3.3.6",
-    "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:storybook/recommended"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react": "^18.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
-    "@storybook/addon-essentials": "^8.2.4",
-    "@storybook/addon-interactions": "^8.2.4",
-    "@storybook/addon-links": "^8.2.4",
-    "@storybook/addon-onboarding": "^8.2.4",
-    "@storybook/blocks": "^8.2.4",
-    "@storybook/preset-create-react-app": "^8.2.4",
-    "@storybook/react": "^8.2.4",
-    "@storybook/react-webpack5": "^8.2.4",
-    "@storybook/test": "^8.2.4",
-    "eslint-plugin-storybook": "^0.8.0",
-    "storybook": "^8.2.4",
-    "webpack": "^5.93.0"
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/addon-onboarding": "^8.2.9",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-webpack5": "^8.2.9",
+    "@storybook/test": "^8.2.9",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.2.9"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   }
 }

@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from "react";
-import useMagicGrid from "./useMagicGrid";
-import "./App.css"; // Ensure you create this file for your styles
+import React from "react";
+import { useMagicGrid } from "../index";
+import "./grid.css";
 
 const Grid = () => {
-    const [name, setName] = useState("name")
+    const [name, setName] = React.useState("name")
 
-    useEffect(() => {
+    React.useEffect(() => {
         console.log(name);
 
         setInterval(() => {
@@ -23,17 +23,18 @@ const Grid = () => {
         useMin: true,
     };
 
-    const grids = useMagicGrid({
+    const grid1 = useMagicGrid({
         container: '.container',
         ...sharedProps
     });
 
-    useMagicGrid({
+    const grid2 = useMagicGrid({
         container: '.container2',
         ...sharedProps
     });
 
-    console.log("grids", grids);
+    console.log("grids", grid1);
+    console.log("grids", grid2);
 
     return (
         <>

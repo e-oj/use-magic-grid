@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Magic Grid React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React wrapper for the [magic-grid](https://github.com/e-oj/Magic-Grid) library
 
-## Available Scripts
+**Note: Every item in the grid must have the same width.**
 
-In the project directory, you can run:
+### Getting Started
+#### Step 1
 
-### `npm start`
+Get Magic Grid via NPM:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+npm install magic-grid-react
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Step 2 (skip if using CDN)
 
-### `npm test`
+Import the `useMagicGrid` hook:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```javascript
+import { useMagicGrid } from 'magic-grid-react';
+```
 
-### `npm run build`
+or
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+const { useMagicGrid } = require('magic-grid-react');
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Step 3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You're good to go! If you used a script tag, the library can be referenced via the global variable, MagicGrid.
 
-### `npm run eject`
+```javascript
+const magicGrid = useMagicGrid(...);
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+magicGrid.listen();
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Usage
+#### Static content:
+If your container doesn't have any dynamically loaded content i.e., all its child elements are always in the DOM, the `items` property is not necessary. You should initialize the grid this way:
+```javascript
+const magicGrid = useMagicGrid({
+  container: "#container", // Required. Can be a class, id, or an HTMLElement.
+  animate: true, // Optional.
+});
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Dynamic content:
+If the container relies on data from an api, or experiences a delay, for whatever reason, before it can render its content in the DOM, you need to let the grid know the number of items to expect:
+```javascript
+const  magicGrid = useMagicGrid({
+  container: "#container", // Required. Can be a class, id, or an HTMLElement.
+  items: 20, // For a grid with 20 items. Required for dynamic content.
+  animate: true, // Optional.
+});
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### API
 
-## Learn More
+#### useMagicGrid(config)
+> config (required): Configuration object
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Initializes the grid with a configuration object, positions items and starts listening for changes to the container size.
+```javascript
+const magicGrid = useMagicGrid({
+  container: "#container", // Required. Can be a class, id, or an HTMLElement
+  items: 30, // Optional. Number of items that should be present before initial positioning. Default: 1.
+  gutter: 30, // Optional. Space between items. Default: 25(px).
+  maxColumns: 5, // Optional. Maximum number of columns. Default: Infinite.
+  useMin: true, // Optional. Prioritize shorter columns when positioning items? Default: false.
+  useTransform: true, // Optional. Position items using CSS transform? Default: True.
+  animate: true, // Optional. Animate item positioning? Default: false.
+  center: true, //Optional. Center the grid items? Default: true. 
+});
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+#### .positionItems()
+This function is useful in cases where you have to manually trigger a repositioning; for instance, if a new element is added to the container.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+const magicGrid = useMagicGrid({
+  container: "#container", // Required. Can be a class, id, or an HTMLElement
+  items: 30, // Required for dynamic content.
+  animate: true, // Optional
+});
 
-### Analyzing the Bundle Size
+// get data from api
+// append new element to DOM
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+// reposition items
+magicGrid.positionItems();
+```
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
