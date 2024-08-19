@@ -1,6 +1,6 @@
 # Use Magic Grid
 
-## React wrapper for the [magic-grid](https://github.com/e-oj/Magic-Grid) library
+## Official React wrapper for the [magic-grid](https://github.com/e-oj/Magic-Grid) library
 
 **Note: Every item in the grid must have the same width.**
 
@@ -13,7 +13,7 @@ Get Magic Grid via NPM:
 npm install use-magic-grid
 ```
 
-#### Step 2 (skip if using CDN)
+#### Step 2 
 
 Import the `useMagicGrid` hook:
 
