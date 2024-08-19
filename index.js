@@ -16,6 +16,7 @@ const useMagicGrid = (props) => {
             return;
         }
 
+        // todo: move this logic into magic-grid lib
         const grid = gridRef.current
         const currentContainer = document.querySelector(grid.containerClass);
         const containerChanged = grid.container !== currentContainer;
