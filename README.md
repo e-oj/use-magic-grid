@@ -33,8 +33,6 @@ You're good to go! If you used a script tag, the library can be referenced via t
 
 ```javascript
 const magicGrid = useMagicGrid(...);
-
-magicGrid.listen();
 ```
 
 ### Usage
