@@ -1,6 +1,6 @@
 {
   "name": "use-magic-grid",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
   "repository": "https://github.com/e-oj/use-magic-grid",
   "dependencies": {
