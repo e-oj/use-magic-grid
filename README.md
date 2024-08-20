@@ -1,6 +1,6 @@
 # Use Magic Grid
 
-## Official React wrapper for the [magic-grid](https://github.com/e-oj/Magic-Grid) library
+## Official React port of the [magic-grid](https://github.com/e-oj/Magic-Grid) library
 
 ### Getting Started
 #### Step 1
