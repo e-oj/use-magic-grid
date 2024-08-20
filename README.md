@@ -83,7 +83,6 @@ This function is useful in cases where you have to manually trigger a reposition
 ```javascript
 const magicGrid = useMagicGrid({
   container: "#container", // Required. Can be a class, id, or an HTMLElement
-  items: 30, // Required for dynamic content.
   animate: true, // Optional
 });
 
