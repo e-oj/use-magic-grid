@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "main": "index.js",
   "dependencies": {
-    "magic-grid": "^3.4.5",
+    "magic-grid": "^3.4.7",
     "react": "^18.3.1"
   },
   "devDependencies": {
