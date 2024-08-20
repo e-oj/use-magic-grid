@@ -2,6 +2,7 @@
   "name": "use-magic-grid",
   "version": "0.0.5",
   "main": "index.js",
+  "repository": "https://github.com/e-oj/use-magic-grid",
   "dependencies": {
     "magic-grid": "^3.4.7",
     "react": "^18.3.1"
