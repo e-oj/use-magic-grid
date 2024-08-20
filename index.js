@@ -16,11 +16,12 @@ const useMagicGrid = (props) => {
             return;
         }
 
-        const currentContainer = document.querySelector(gridRef.current.containerClass);
-        const containerChanged = gridRef.current.container !== currentContainer;
+        const grid = gridRef.current;
+        const currentContainer = document.querySelector(grid.containerClass);
+        const containerChanged = grid.container !== currentContainer;
 
         if (currentContainer && containerChanged){
-            gridRef.current.setContainer(currentContainer);
+            grid.setContainer(currentContainer);
         }
     });
 
