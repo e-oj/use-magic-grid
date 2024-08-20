@@ -27,7 +27,7 @@ const { useMagicGrid } = require('use-magic-grid');
 
 #### Step 3
 
-You're good to go! If you used a script tag, the library can be referenced via the global variable, MagicGrid.
+You're good to go!
 
 ```javascript
 const magicGrid = useMagicGrid(...);
