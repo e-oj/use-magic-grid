@@ -2,8 +2,6 @@
 
 ## Official React wrapper for the [magic-grid](https://github.com/e-oj/Magic-Grid) library
 
-**Note: Every item in the grid must have the same width.**
-
 ### Getting Started
 #### Step 1
 
@@ -36,6 +34,8 @@ const magicGrid = useMagicGrid(...);
 ```
 
 ### Usage
+**Note: You don't have to call `magicGrid.listen` when using this hook**
+
 #### Static content:
 If your container doesn't have any dynamically loaded content i.e., all its child elements are always in the DOM, the `items` property is not necessary. You should initialize the grid this way:
 ```javascript
@@ -56,6 +56,7 @@ const  magicGrid = useMagicGrid({
 ```
 
 ### API
+Check the [magic-grid docs](https://github.com/e-oj/Magic-Grid?tab=readme-ov-file#api) for the full list of available functions
 
 #### useMagicGrid(config)
 > config (required): Configuration object
