@@ -25,3 +25,10 @@
 .container2 .item4 { height: 800px; }
 .container2 .item6 { height: 600px; }
 .container2 .item11 { height: 400px; }
+
+.resizeable {
+    width: 80%;
+    resize: horizontal;
+    overflow: auto;
+    border: solid 1px lightgray;
+}

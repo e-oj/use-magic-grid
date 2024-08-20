@@ -21,3 +21,9 @@ export default {
 export const Primary = {
     args: {},
 };
+
+export const ResizeableContainer = {
+    args: {
+        resizeable: true
+    },
+};
