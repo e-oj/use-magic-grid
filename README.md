@@ -2,6 +2,8 @@
 
 ## Official React port of the [magic-grid](https://github.com/e-oj/Magic-Grid) library
 
+<img src="https://drive.google.com/u/1/uc?id=1UaszcWA83aaLl0ZPAUtZW4K-qfuyJz7Z&export=download" alt="demo" width="850"></img>
+
 ### Getting Started
 #### Step 1
 
